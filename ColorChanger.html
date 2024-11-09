@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer </title>
+</head>
+<body>
+    <div class="canvas" >
+        <h3 style="color:magenta; padding: 1%; background-color: rgb(0, 0, 0); margin: 10%;" id="heading" > Made By CypherX</h3>
+        <h1> Background Color Changer </h1>
+        <button id="grey" class="button">Grey</button>
+        <button id="red" class="button">Red</button>
+        <button id="green" class="button">Green</button>
+        <button id="yellow" class="button">Yellow</button>
+        <button id="reset" class="button">Reset</button>
+        <h2> Click on the Buttons to change the background Color</h2>
+        
+
+    </div>
+
+<style>
+        html {
+            margin: 0;
+        }
+        button {
+            display: block;
+        }
+        .canvas {
+            margin: 100px auto 100px ;
+            text-align: center;
+            width: 80%;
+
+        }
+        .button {
+            width: 100px;
+            height: 100px;
+            border: solid black 2px;
+            display: inline-block;
+        }
+        #grey {
+            background-color: grey;
+        }
+        #red {
+            background-color: red;
+        }
+        #green {
+            background-color: green;
+        }
+        #yellow {
+            background-color: yellow;
+        }
+        #reset {
+            background-color: white;
+        }
+      
+
+
+</style>
+<script>
+const buttons = document.querySelectorAll('button');
+const body = document.querySelector('body');
+
+buttons.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+        console.log(e);             // Logs the event object
+        console.log(e.target);      // Logs the clicked button
+
+        if (e.target.id === 'grey') {
+            body.style.backgroundColor = 'grey';
+        }
+        if (e.target.id === 'red') {
+            body.style.backgroundColor = 'red';
+        }
+        if (e.target.id === 'green') {
+            body.style.backgroundColor = 'green';
+        }
+        if (e.target.id === 'yellow') {
+            body.style.backgroundColor = 'yellow';
+        }
+        if (e.target.id === 'reset') {
+            body.style.backgroundColor = 'white' ;
+        }
+        
+    });
+});
+const abc = document.getElementById('heading').addEventListener('click', function() {
+    alert('CypherX aka Ayush Mishra is Pentester and Security Researcher.')
+
+   
+});
+const font = document.querySelector('#heading');
+for ( let i = 0; i < font.length ; i++) {
+    font[i].style.fontSize = '10rem' 
+}
+
+</script>
+</body>
+</html>
